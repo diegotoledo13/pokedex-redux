@@ -1,0 +1,22 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  color: #fff;
+  margin-bottom: 50px;
+}
+.header img {
+  width: 300px;
+  height: 700px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.header-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.header-title img {
+  width: 300px;
+  height: 300px;
+  margin-right: 10px;
+}
