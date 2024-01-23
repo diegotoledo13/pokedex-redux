@@ -1,13 +1,12 @@
 import { Card } from "antd";
 import Meta from "antd/es/card/Meta";
-import gengarEjemplo from "../assets/094.png";
 import { StarOutlined } from "@ant-design/icons";
 
-const PokemonCard = ({ name }) => {
+const PokemonCard = ({ name, image, types }) => {
   return (
     <Card
       title={name}
-      cover={<img src={gengarEjemplo} alt="Gengar"></img>}
+      cover={<img src={image} alt={name}></img>}
       extra={<StarOutlined />}
     >
       <Meta description="Fantasma, Veneno" />
