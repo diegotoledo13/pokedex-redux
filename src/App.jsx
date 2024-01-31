@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import "./App.css";
 
 function App() {
+  const state = useSelector((state) => state.data, shallowEqual);
   const pokemons = useSelector((state) => state.data.pokemons, shallowEqual);
   const loading = useSelector((state) => state.ui.loading);
   const dispatch = useDispatch();
@@ -26,7 +27,9 @@ function App() {
           <Spin spinning size="large" />
         </Col>
       ) : (
-        <PokemonList pokemons={pokemons} />
+        <PokemonList
+          pokemons={state.isSearch ? state.searchPokemons : state.pokemons}
+        />
       )}
     </div>
   );

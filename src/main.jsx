@@ -11,7 +11,7 @@ import thunk from "redux-thunk";
 import { logger } from "./middlewares";
 import App from "./App.jsx";
 
-const composeAlt = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeAlt = compose;
 
 const composedEnhancers = composeAlt(applyMiddleware(thunk, logger));
 
