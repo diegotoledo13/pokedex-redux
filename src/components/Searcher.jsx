@@ -1,7 +1,7 @@
 import { Input } from "antd";
-
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { filterPokemonSearch } from "../slices/dataSlice";
+import "../styles/Searcher.css";
 
 const Searcher = () => {
   const state = useSelector((state) => state.data, shallowEqual);
@@ -26,6 +26,7 @@ const Searcher = () => {
   return (
     <>
       <Input
+        className="searcher"
         placeholder="buscar pokemon..."
         onChange={handleChange}
         disabled={loading}

@@ -23,13 +23,15 @@ function App() {
         <Searcher />
       </Col>
       {loading ? (
-        <Col offset={6}>
+        <Col span={8} offset={8}>
           <Spin spinning size="large" />
         </Col>
       ) : (
-        <PokemonList
-          pokemons={state.isSearch ? state.searchPokemons : state.pokemons}
-        />
+        <Col>
+          <PokemonList
+            pokemons={state.isSearch ? state.searchPokemons : state.pokemons}
+          />
+        </Col>
       )}
     </div>
   );
